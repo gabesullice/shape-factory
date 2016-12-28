@@ -55,8 +55,8 @@ const DEFINITIONS = {
 
 export default class ShapeFactory {
 
-  constructor({unit = 1} = {}) {
-    this._definitions = DEFINITIONS;
+  constructor({unit = 1, definitions = DEFINITIONS} = {}) {
+    definitions.forEach(this.setDefinition);
     this._unit = unit;
   }
 
@@ -65,7 +65,19 @@ export default class ShapeFactory {
     const points = this._definitions[type].map(point => {
       return [point[0] * scale, point[1] * scale];
     });
-    return new Shape(points);
+    return this.arbitrary(points);
+  }
+
+  arbitrary(vertices) {
+    return new Shape(vertices);
+  }
+
+  setDefinition(vertices, label) {
+    this._definitions[label] = vertices;
+  }
+
+  unsetDefinition(label) {
+    return delete this._definitions[label];
   }
 
 }
