@@ -1,15 +1,18 @@
 {
   "name": "shape-factory",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Simple factory for generating shapes for use by the libshapes package.",
   "main": "lib/ShapeFactory.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "babel": "babel"
+    "babel": "babel",
+    "build": "babel src --out-dir lib",
+    "test": "ava tests/*.js -v",
+    "ava": "ava"
   },
   "author": "Gabriel SULLICE",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^0.17.0",
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0"
   },

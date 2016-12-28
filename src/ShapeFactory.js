@@ -56,10 +56,10 @@ const DEFINITIONS = {
 export default class ShapeFactory {
 
   constructor({unit = 1, definitions = DEFINITIONS} = {}) {
-    for (let label in definitions) {
-      this.setDefinition(label, definitions[label]);
-    }
+    this._definitions = {};
     this._unit = unit;
+
+    this._setDefinitions(definitions);
   }
 
   make(type, unit) {
@@ -80,6 +80,12 @@ export default class ShapeFactory {
 
   unsetDefinition(label) {
     return delete this._definitions[label];
+  }
+
+  _setDefinitions(definitions) {
+    for (let label in definitions) {
+      this.setDefinition(label, definitions[label]);
+    }
   }
 
 }
