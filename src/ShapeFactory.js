@@ -56,7 +56,9 @@ const DEFINITIONS = {
 export default class ShapeFactory {
 
   constructor({unit = 1, definitions = DEFINITIONS} = {}) {
-    definitions.forEach(this.setDefinition);
+    for (let label in definitions) {
+      this.setDefinition(label, definitions[label]);
+    }
     this._unit = unit;
   }
 
@@ -72,7 +74,7 @@ export default class ShapeFactory {
     return new Shape(vertices);
   }
 
-  setDefinition(vertices, label) {
+  setDefinition(label, vertices) {
     this._definitions[label] = vertices;
   }
 
