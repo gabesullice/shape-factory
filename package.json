@@ -1,6 +1,6 @@
 {
   "name": "shape-factory",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Simple factory for generating shapes for use by the libshapes package.",
   "main": "lib/ShapeFactory.js",
   "scripts": {
@@ -17,6 +17,6 @@
     "babel-preset-latest": "^6.16.0"
   },
   "dependencies": {
-    "libshapes": "^0.10.2"
+    "libshapes": "^0.11.0"
   }
 }
