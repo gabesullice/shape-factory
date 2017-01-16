@@ -28,13 +28,14 @@ const DEFINITIONS = {
   diamond: [[-UNIT/2,0], [0,EQUILATERAL_HEIGHT], [UNIT/2,0], [0,-EQUILATERAL_HEIGHT]],
   rhombus: [[-UNIT/2,0], [-UNIT/2, UNIT], [UNIT/2,0], [UNIT/2, -UNIT]],
   trapezoid: (() => {
+    const offsetY = -1/Math.tan(2*Math.PI/3) * -UNIT/2;
     const points = [];
     const first = [UNIT,0];
     let angle = 0;
     for (var i = 0; i < 4; i++) {
       const point = [
         (first[0] * Math.cos(angle)) - (first[1] * Math.sin(angle)),
-        (first[0] * Math.sin(angle)) + (first[1] * Math.cos(angle)),
+        (first[0] * Math.sin(angle)) + (first[1] * Math.cos(angle)) + offsetY,
       ];
       points.push(point);
       angle = angle + Math.PI/3;
