@@ -8,7 +8,7 @@ const DEFINITIONS = {
   right: [[-UNIT/3, -UNIT/3], [-UNIT/3, 2 * UNIT/3], [2 * UNIT/3, -UNIT/3]],
   equilateral: (() => {
     const offsetY = -1/Math.tan(2*Math.PI/3) * -UNIT/2;
-    return [[-UNIT/2,-offsetY], [0,EQUILATERAL_HEIGHT - offsetY], [UNIT/2,-offsetY]];
+    return [[-UNIT/2, offsetY], [0,EQUILATERAL_HEIGHT + offsetY], [UNIT/2, offsetY]];
   })(),
   square: [[-UNIT/2,-UNIT/2], [-UNIT/2,UNIT/2], [UNIT/2,UNIT/2], [UNIT/2,-UNIT/2]],
   hexagon: (() => {
