@@ -17,6 +17,6 @@
     "babel-preset-latest": "^6.16.0"
   },
   "dependencies": {
-    "libshapes": "^0.15.15"
+    "libshapes": "^0.15.21"
   }
 }
