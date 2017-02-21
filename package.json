@@ -1,6 +1,6 @@
 {
   "name": "shape-factory",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Simple factory for generating shapes for use by the libshapes package.",
   "main": "lib/ShapeFactory.js",
   "scripts": {

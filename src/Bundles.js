@@ -78,7 +78,7 @@ const bundles = {
     square: (() => {
       return [[0,0], [0,UNIT], [UNIT,UNIT], [UNIT,0]];
     })(),
-    square: (() => {
+    quadrilateral: (() => {
       return [[-UNIT/2,0], [-UNIT/2,UNIT], [UNIT/2,0], [UNIT/2,-UNIT]];
     })(),
   },
